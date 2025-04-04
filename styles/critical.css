@@ -1,0 +1,44 @@
+:root {
+    --primary-color: #0a0b1e;
+    --accent-color: #4a90e2;
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.7);
+}
+
+.preloader {
+    position: fixed;
+    inset: 0;
+    background: var(--bg-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(10, 11, 30, 0.95);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.section {
+    padding: 5rem 0;
+    position: relative;
+}
+
+img {
+    content-visibility: auto;
+}
+
+.lazy-load {
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+}
+
+.lazy-load.loaded {
+    opacity: 1;
+}

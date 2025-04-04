@@ -1,0 +1,107 @@
+/* Contact Section Styles */
+.contact-section {
+    background-color: var(--bg-primary);
+    padding: 4rem 0;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-control {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 0.2rem rgba(var(--accent-color-rgb), 0.25);
+    background-color: var(--bg-secondary);
+}
+
+.form-control::placeholder {
+    color: var(--text-secondary);
+}
+
+textarea.form-control {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.contact-info {
+    margin-top: 2rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.contact-icon {
+    width: 40px;
+    height: 40px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+    color: var(--text-light);
+}
+
+.contact-text {
+    flex: 1;
+}
+
+.contact-text h5 {
+    margin-bottom: 0.25rem;
+    color: var(--text-primary);
+}
+
+.contact-text p {
+    margin: 0;
+    color: var(--text-secondary);
+}
+
+.submit-button {
+    background-color: var(--accent-color);
+    color: var(--text-light);
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: var(--accent-color-hover);
+    transform: translateY(-2px);
+}
+
+.submit-button:active {
+    transform: translateY(0);
+}
+
+/* RTL specific adjustments */
+.contact-icon {
+    margin-left: 0;
+    margin-right: 1rem;
+}
+
+/* Form validation styles */
+.form-control.is-invalid {
+    border-color: var(--error-color);
+    background-image: none;
+}
+
+.invalid-feedback {
+    color: var(--error-color);
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}

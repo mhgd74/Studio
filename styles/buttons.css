@@ -1,0 +1,74 @@
+.btn-explore {
+    position: relative;
+    overflow: hidden;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    background: var(--gradient-1);
+    border: none;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+.btn-explore:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.btn-explore .btn-text {
+    position: relative;
+    z-index: 2;
+    margin-left: 0.5rem;
+    font-weight: 600;
+}
+
+.btn-explore .btn-icon {
+    position: relative;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.btn-explore:hover .btn-icon {
+    transform: translateY(3px);
+    animation: bounce 1s infinite;
+}
+
+.btn-hover-effect {
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-2);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.btn-explore:hover .btn-hover-effect {
+    opacity: 1;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(5px);
+    }
+}
+
+/* تحسين التفاعل عند النقر */
+.btn-explore:active {
+    transform: scale(0.98);
+}
+
+/* تحسين الوصول */
+@media (prefers-reduced-motion: reduce) {
+    .btn-explore {
+        transition: none;
+    }
+    
+    .btn-explore:hover .btn-icon {
+        animation: none;
+    }
+} 
